@@ -86,7 +86,7 @@ public class BookingController {
 		
 		return new ResponseEntity<Object>("No Bookings found in DataBase with given ID",HttpStatus.UNAUTHORIZED);
 	}
-	// This GET method implemented by raviteja
+	// This GET method is implemented by raviteja
 	@GetMapping("/showAllByMovieId/{movieId}")
 	public ResponseEntity<Object> showAllBooking(@PathVariable int movieId)  {
 		logger.debug("BookingController is executing find booking by movieId");
@@ -101,7 +101,7 @@ public class BookingController {
 		}
 		return new ResponseEntity<Object>("No Bookings found in DataBase with given ID",HttpStatus.UNAUTHORIZED);
 	}
-	
+	// This GET method  is implemented by raviteja
 	@GetMapping("/showAllByshowId/{showId}")
 	public ResponseEntity<Object> showBookingList(@PathVariable int showId) {
 		logger.debug("BookingController is executing find booking by show id");
