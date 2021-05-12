@@ -27,7 +27,7 @@ public class TheatreController {
 	ITheatreRepository repository;
 	
 	Logger logger=LoggerFactory.getLogger(TheatreController.class);
-	
+	//add theatre
 	@PostMapping("/addTheatre")
 	public ResponseEntity<Theatre> addTheatre(@Valid @RequestBody Theatre theatre){
 		logger.info("addTheatre method is accessed from the MovieController");
@@ -36,3 +36,4 @@ public class TheatreController {
 	}
 	
 }
+//This method is implemented by Ratna kumari
