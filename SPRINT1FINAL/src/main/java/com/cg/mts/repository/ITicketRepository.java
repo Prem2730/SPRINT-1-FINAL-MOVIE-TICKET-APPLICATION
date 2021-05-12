@@ -9,3 +9,4 @@ import com.cg.mts.entities.Ticket;
 public interface ITicketRepository extends JpaRepository<Ticket, Integer>{
 
 }
+//done by raviteja
