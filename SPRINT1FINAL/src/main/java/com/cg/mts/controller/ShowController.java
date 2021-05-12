@@ -31,7 +31,7 @@ public class ShowController {
 	IShowService service;
 
 	Logger logger = LoggerFactory.getLogger(ShowController.class);
-
+//addShow
 	@PostMapping("/addShow")
 	public ResponseEntity<Object> addShow(@RequestBody Show show){
 		logger.info("Inside addShow method");
@@ -46,7 +46,7 @@ public class ShowController {
 		}
 		return new ResponseEntity<Object>("Cannot add show, Show Id exists", HttpStatus.BAD_REQUEST);
 	}
-
+//getAllShows
 	@GetMapping("/getAllShows")
 	public ResponseEntity<Object> getAllShows(){
 		logger.info("Inside getAllShows method");
@@ -60,7 +60,7 @@ public class ShowController {
 		}
 		return new ResponseEntity<Object>("No show in database", HttpStatus.BAD_REQUEST);
 	}
-
+//Delete show
 	@DeleteMapping("/deleteShow")
 	public ResponseEntity<String> deleteShow(@RequestParam int showId) {
 		logger.info("Inside deleteShow method");
@@ -73,7 +73,7 @@ public class ShowController {
 		}
 		return new ResponseEntity<String>("Show Id not found, cannot delete show", HttpStatus.BAD_REQUEST);
 	}
-
+//getShowByShowId
 	@GetMapping("/getShowByShowId/{showId}")
 	public ResponseEntity<Object> getShowByShowId(@PathVariable("showId") int id){
 		logger.info("Inside getShowByShowId method");
