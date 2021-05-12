@@ -10,6 +10,7 @@ import com.cg.mts.exception.ShowExistsException;
 import com.cg.mts.exception.ShowNotFoundException;
 
 public interface IShowService {
+//unimplemented methods
 
 	public Show addShow(Show show) throws ShowExistsException;
 	public Show updateShow(Show show) throws ShowNotFoundException;
@@ -17,5 +18,6 @@ public interface IShowService {
 	public Show viewShow(int showid) throws ShowNotFoundException;
 	public List<Show> viewAllShows() throws ShowNotFoundException;
 	public List<Show> viewShowList(int theatreid)throws ShowNotFoundException;
+//This is implemented by Aruna
 
 }
