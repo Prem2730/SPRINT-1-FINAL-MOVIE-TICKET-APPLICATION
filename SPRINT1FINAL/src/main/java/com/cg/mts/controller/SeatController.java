@@ -84,16 +84,17 @@ public class SeatController {
 		}
 	}
 
-	
+//To add new seat - if not throw exception	
 	@PostMapping("/addNewSeat")
 	public ResponseEntity<Object> addNewSeat(@Valid @RequestBody Seat seat){
 		Seat seatData=null;
-		try {
+		try {//To check the exception.
 			seatData = service.addSeat(seat);
 			return new ResponseEntity<Object>(seatData, HttpStatus.OK);
-		} catch (SeatExistsException e) {
+			//if exception  catch blocks catches the exception and print exception message.
+		} catch (SeatExistsException e) {//if exception excute this block.
 			// TODO Auto-generated catch block
-			logger.error("Seat Exists Exception");
+			logger.error("Seat Exists Exception");//this message prints.
 			//e.printStackTrace();
 			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
 		}
