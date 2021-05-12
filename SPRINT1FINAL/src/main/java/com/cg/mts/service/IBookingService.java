@@ -9,7 +9,7 @@ import com.cg.mts.entities.Booking;
 import com.cg.mts.exception.BookingExistsException;
 import com.cg.mts.exception.BookingNotFoundException;
 
-
+//implemented functions with exceptions
 public interface IBookingService {
 	public Booking addBooking(Booking booking)throws BookingNotFoundException,BookingExistsException;
 	public Booking updateBooking(Booking booking) throws BookingNotFoundException;
