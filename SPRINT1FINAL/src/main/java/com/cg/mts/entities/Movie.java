@@ -31,7 +31,7 @@ public class Movie {
 	
 	private LocalDate movieReleaseDate;
 	
-	//seters and getters	
+	//seters and getters
 		
 	public int getMovieId() {
 		return movieId;
