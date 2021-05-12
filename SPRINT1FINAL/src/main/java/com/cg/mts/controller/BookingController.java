@@ -56,7 +56,7 @@ public class BookingController {
 		}
 	}
 		
-	
+//implementation of put method	to update booking-by nagendra
 @PutMapping("/updateBooking")
 	public ResponseEntity<Object> updateBooking(@Valid @RequestBody Booking booking)  {
 		logger.debug("BookingController is executing updateBooking ");
