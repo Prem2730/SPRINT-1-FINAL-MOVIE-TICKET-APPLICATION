@@ -11,6 +11,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+//this entity class is done by nagendra
 //this entity class is done by raviteja
 @Entity
 @Table(name="booking_master")
