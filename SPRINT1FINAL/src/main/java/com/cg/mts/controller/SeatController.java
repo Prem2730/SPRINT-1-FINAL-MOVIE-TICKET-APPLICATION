@@ -36,6 +36,7 @@ public class SeatController {
 
 // This implementation is for booking seat & if not throw exception.
 	@PostMapping("/bookSeat")
+	//http://localhost:8089/mts/seat/bookSeat?seatId=1
 	public ResponseEntity<Object> bookSeat(@RequestParam int seatId)  {
 		logger.info("Inside bookSeat method"); //logger helps to see is message.
 		Seat seatData = null;
