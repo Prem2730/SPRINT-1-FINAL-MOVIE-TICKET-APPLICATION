@@ -25,7 +25,7 @@ public class ShowService implements IShowService {
 	IShowRepository repository;
 	
 	Logger logger = LoggerFactory.getLogger(ShowService.class);
-	
+	//This is for adding new show
 	@Override
 	public Show addShow(Show show) throws ShowExistsException{
 		logger.info("Inside addShow method");
