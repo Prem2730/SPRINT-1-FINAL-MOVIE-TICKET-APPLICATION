@@ -34,7 +34,7 @@ public class SeatController {
 //logger - to see output.
 	Logger logger = LoggerFactory.getLogger(SeatController.class);
 
-// To booking seat & if not throw exception.
+// This implementation is for booking seat & if not throw exception.
 	@PostMapping("/bookSeat")
 	public ResponseEntity<Object> bookSeat(@RequestParam int seatId)  {
 		logger.info("Inside bookSeat method"); //logger helps to see is message.
@@ -50,7 +50,7 @@ public class SeatController {
 		}
 		
 	}
-//To cancel seat & if not throw exception.
+// This implementation is for  cancel seat & if not throw exception.
 	@PutMapping("/cancelSeat")
 	public ResponseEntity<Object> cancelSeat(@RequestParam int seatId) {
 		logger.info("Inside cancelSeat method");
@@ -67,7 +67,7 @@ public class SeatController {
 		
 	}
 	
-//To block seat & if not throw exception
+// This implementation is for block seat - if not throw exception
 	@PutMapping("/blockSeat")
 	public ResponseEntity<Object> blockSeat(@RequestParam int seatId) { //check in data
 		Seat seatData;
@@ -84,7 +84,7 @@ public class SeatController {
 		}
 	}
 
-//To add new seat - if not throw exception	
+// This implementation is for add new seat - if not throw exception	
 	@PostMapping("/addNewSeat")
 	public ResponseEntity<Object> addNewSeat(@Valid @RequestBody Seat seat){
 		Seat seatData=null;
@@ -100,7 +100,7 @@ public class SeatController {
 		}
 	}
 	
-	//To get avaliable seats - if not throw exception
+	// This implementation is for get avaliable seats - if not throw exception
 	@GetMapping("/getAvailableSeats")
 	public ResponseEntity<Object> getAllSeats() {
 		List<Seat> seatList;
