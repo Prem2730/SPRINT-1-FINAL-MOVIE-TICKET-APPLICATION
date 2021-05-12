@@ -1,5 +1,5 @@
 package com.cg.mts.entities;
-
+//these are the packages
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -48,3 +48,5 @@ public class Admin extends User {
 		this.adminContact = adminContact;
 	}
 }
+
+//this entity class created by PREM
