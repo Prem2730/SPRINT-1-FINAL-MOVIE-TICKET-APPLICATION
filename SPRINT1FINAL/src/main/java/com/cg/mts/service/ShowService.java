@@ -48,6 +48,7 @@ public class ShowService implements IShowService {
 			throw new ShowNotFoundException("Show not found");
 		
 	}
+//This is for deleting show
 
 	@Override
 	public void removeShow(int showId) throws ShowNotFoundException {
@@ -59,6 +60,7 @@ public class ShowService implements IShowService {
 			throw new ShowNotFoundException("Invalid showid, cannot delete show");
 		
 	}
+//This is for view show
 
 	@Override
 	public Show viewShow(int showid) throws ShowNotFoundException {
@@ -70,6 +72,7 @@ public class ShowService implements IShowService {
 			throw new ShowNotFoundException("Invalid Show Id, no shows found");
 		}
 	}
+//This is for  viewallshows
 
 	@Override
 	public List<Show> viewAllShows() throws ShowNotFoundException {
