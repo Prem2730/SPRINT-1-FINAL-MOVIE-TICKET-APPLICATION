@@ -1,5 +1,5 @@
 package com.cg.mts.entities;
-
+// these are the imports
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -53,3 +53,4 @@ public class User {
 		this.role = role;
 	}
 }
+// this entity class is created by PREM
