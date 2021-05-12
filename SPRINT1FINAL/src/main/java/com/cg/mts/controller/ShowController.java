@@ -102,7 +102,7 @@ public class ShowController {
 		}
 		return new ResponseEntity<Object>("No show found with given Theatre Id: "+id, HttpStatus.BAD_REQUEST);
 	}
-	
+	//updateShow
 	@PutMapping("/updateShow")
 	public ResponseEntity<Object> updateShow(@RequestBody Show show){
 		Show showData;
