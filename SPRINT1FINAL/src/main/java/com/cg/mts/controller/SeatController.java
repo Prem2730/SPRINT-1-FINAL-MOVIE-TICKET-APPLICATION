@@ -66,18 +66,19 @@ public class SeatController {
 		}
 		
 	}
-
+	
+//To block seat & if not throw exception
 	@PutMapping("/blockSeat")
-	public ResponseEntity<Object> blockSeat(@RequestParam int seatId) {
+	public ResponseEntity<Object> blockSeat(@RequestParam int seatId) { //check in data
 		Seat seatData;
 		logger.info("Inside blockSeat method");
-		try {
+		try {//To check the exception.
 			seatData = service.blockSeat(seatId);
 			return new ResponseEntity<Object>(seatData, HttpStatus.OK);
-
-		} catch (SeatNotFoundException e) {
+//if exception  catch blocks catches the exception and print exception message.
+		} catch (SeatNotFoundException e) {//if exception excute this block.
 			// TODO Auto-generated catch block
-			logger.error("Seat Not Found Exception");
+			logger.error("Seat Not Found Exception"); //this message prints.
 			e.printStackTrace();
 			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
 		}
