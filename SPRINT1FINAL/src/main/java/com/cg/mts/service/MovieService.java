@@ -29,7 +29,7 @@ public class MovieService implements IMovieService{
 	
 	Logger logger = LoggerFactory.getLogger(MovieService.class);
 	
-	
+	//This method is for add Movie
 	@Override
 	public Movie addMovie(Movie movie) throws MovieNotFoundException {
 		logger.debug("addMovie method is accessed in MovieService");
@@ -47,7 +47,7 @@ public class MovieService implements IMovieService{
 	}
 
 	
-	
+	//This method is for delete movie
 	@Override
 	public String removeMovie(int movieid) throws MovieNotFoundException {
 		logger.debug("removeMovie method is accessed in MovieService");
@@ -67,7 +67,7 @@ public class MovieService implements IMovieService{
 	}
 
 	
-	
+	//This method is for upadate movie
 	@Override
 	public Movie updateMovie(Movie movie) throws MovieNotFoundException {
 		logger.debug("updateMovie method is accessed in MovieService");
@@ -84,7 +84,7 @@ public class MovieService implements IMovieService{
 		}
 	}
 
-	
+	//This method is for view Movie List by Movie id
 	
 	@Override
 	public Movie viewMovie(int movieid) throws MovieNotFoundException {
@@ -102,7 +102,7 @@ public class MovieService implements IMovieService{
 	}
 
 	
-	
+	//This method is for to view movieList
 	@Override
 	public List<Movie> viewMovieList() throws MovieNotFoundException{
 		logger.debug("viewMovieList method is accessed in MovieService");
