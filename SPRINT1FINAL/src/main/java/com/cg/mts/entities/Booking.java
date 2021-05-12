@@ -27,6 +27,7 @@ public class Booking {
 	@OneToOne
 	@JoinColumn(name="ticket_Id")
 	private Ticket ticket;
+	//implementation of getters and setters
 	public int getBookingId() {
 		return bookingId;
 	}
