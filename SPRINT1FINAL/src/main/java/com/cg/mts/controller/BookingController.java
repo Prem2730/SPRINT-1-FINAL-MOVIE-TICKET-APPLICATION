@@ -39,7 +39,7 @@ public class BookingController {
 	IBookingService service;
 	Logger logger=LoggerFactory.getLogger(BookingController.class);
 	
-	
+	// implementation of post method-by nagendra
 	@PostMapping("/addBooking")
 	public ResponseEntity<Object> addBooking(@Valid @RequestBody Booking booking) {
 		logger.debug("BookingController is executing addBooking ");
