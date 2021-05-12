@@ -85,6 +85,7 @@ public class ShowService implements IShowService {
 			return showList;
 		
 	}
+//This is for  viewby theatreId
 
 	@Override
 	public List<Show> viewShowList(int theatreid) throws ShowNotFoundException {
