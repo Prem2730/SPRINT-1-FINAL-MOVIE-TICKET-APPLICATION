@@ -12,7 +12,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
+// this class is done by raviteja
 @Entity
 @Table(name="ticket_master")
 public class Ticket {
