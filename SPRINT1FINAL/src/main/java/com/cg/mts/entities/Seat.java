@@ -13,8 +13,8 @@ import javax.persistence.Table;
 public class Seat {
 	@Id
 	@GeneratedValue
+	//attributes.
 	private int seatId;
-
 
 	private String seatNumber;
 
@@ -23,7 +23,7 @@ public class Seat {
 	private double price;
 
 	private BookingState state;
-
+//getters and setters
 	public BookingState getState() {
 		return state;
 	}
@@ -57,6 +57,7 @@ public class Seat {
 	public Seat() {
 		super();
 	}
+	//constructor
 	public Seat(String seatNumber, String type, double price, BookingState state) {
 		super();
 		this.seatNumber = seatNumber;
@@ -72,6 +73,7 @@ public class Seat {
 		this.price = price;
 		this.state = state;
 	}
+	//ToString.
 	@Override
 	public String toString() {
 		return "Seat [seatId=" + seatId + ", seatNumber=" + seatNumber + ", type=" + type + ", price=" + price
