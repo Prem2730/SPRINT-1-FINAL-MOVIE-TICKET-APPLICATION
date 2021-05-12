@@ -18,14 +18,6 @@ public interface IMovieRepository extends JpaRepository<Movie, Integer> {
 	public Movie findByMovieId(int movieId) throws MovieNotFoundException;	 
 	
 	
-	/*
-	public Movie addMovie(Movie movie);
-	public Movie removeMovie(int movieid) throws MovieNotFoundException;
-	public Movie updateMovie(Movie movie) throws MovieNotFoundException;
-	public Movie viewMovie(int movieid) throws MovieNotFoundException;
-	public List<Movie> viewMovieList();
-	public List<Movie> viewMovieList(int theatreid);
-	public List<Movie> viewMovieList(LocalDate date);
-	*/
 	
 }
+//This repository is implemented by Ratna Kumari
