@@ -40,7 +40,7 @@ IMovieRepository movierepository;
 Logger logger=LoggerFactory.getLogger(BookingController.class);
 	
 
-
+//implemented exceptions to the methods Add, update, cancel
 @Override
 	public Booking addBooking(Booking booking) throws BookingNotFoundException,BookingExistsException {
 	logger.debug("BookingService is implementing add booking method");
