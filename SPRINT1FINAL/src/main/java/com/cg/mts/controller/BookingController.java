@@ -71,6 +71,8 @@ public class BookingController {
 		
 		return new ResponseEntity<Object>("No Bookings found in DataBase with given ID",HttpStatus.UNAUTHORIZED);
 	}
+	
+	//implementation of delete method to delete booking by nagendra
 	@DeleteMapping("/cancelBooking/{bookingId}")
 	public ResponseEntity<Object> cancelBooking(@PathVariable int bookingId){
 		logger.debug("BookingController is executing cancelBooking ");
