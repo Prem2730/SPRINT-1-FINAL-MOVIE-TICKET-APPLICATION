@@ -1,4 +1,5 @@
 package com.cg.mts.entities;
+//these are the packages
 
 import java.util.List;
 
@@ -105,3 +106,4 @@ public class Screen {
 	}
 
 }
+//This entity was created by Aruna
