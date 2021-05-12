@@ -1,5 +1,5 @@
 package com.cg.mts.entities;
-
+//packages
 import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,7 +31,7 @@ public class Movie {
 	
 	private LocalDate movieReleaseDate;
 	
-		
+	//seters and getters	
 		
 	public int getMovieId() {
 		return movieId;
@@ -119,3 +119,4 @@ public class Movie {
 
 
 }
+//This class is implemented by Ratna kumari
