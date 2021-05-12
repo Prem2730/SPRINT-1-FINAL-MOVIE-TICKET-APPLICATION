@@ -35,14 +35,14 @@ public class CustomerController {
 	ICustomerService service;
 	
 	Logger logger = LoggerFactory.getLogger(CustomerController.class);
-
+        // implementation for adding customer
 	@PostMapping("/addCustomer")
 	public ResponseEntity<Customer> addCustomer(@Valid @RequestBody Customer customer) {
 		logger.info("Inside addCustomer method");
 		Customer customerData = service.addCustomer(customer);
 		return new ResponseEntity<Customer>(customerData, HttpStatus.OK);
 	}
-
+// implementation for deleting customer using by customerid
 	@DeleteMapping("/deleteCustomerById/{customerId}")
 	public ResponseEntity<Object> deleteCustomer(@RequestParam int customerId){
 		logger.info("Inside deleteCustomerById method");
@@ -57,6 +57,7 @@ public class CustomerController {
 		return new ResponseEntity<Object>("Customer data not found", HttpStatus.UNAUTHORIZED);
 	}
 
+//implementaion for getting Customer  using userid
 	@GetMapping("/getCustomerById/{userId}")
 	public ResponseEntity<Object> getCustomerById(@PathVariable("userId") int id) {
 		logger.info("Inside getCustomerById method");
@@ -85,7 +86,7 @@ public class CustomerController {
 		}
 		return new ResponseEntity<Object>("MovieId not found", HttpStatus.UNAUTHORIZED);
 	}
-
+// gettting all customers
 	@GetMapping("/getAllCustomer")
 	public ResponseEntity<Object>getAllCustomer(){
 		logger.info("Inside getAllCustomer method");
@@ -99,7 +100,7 @@ public class CustomerController {
 		}
 		return new ResponseEntity<Object>("Customers not found", HttpStatus.UNAUTHORIZED);
 	}
-
+//to update customer
 	@PutMapping("/updateCustomer")
 	public ResponseEntity<Object> updateCustomer(@Valid @RequestBody Customer customer) {
 		logger.info("Inside updateCustomer method");
