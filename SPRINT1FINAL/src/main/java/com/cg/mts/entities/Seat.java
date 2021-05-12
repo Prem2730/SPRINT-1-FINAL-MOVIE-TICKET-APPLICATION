@@ -1,5 +1,5 @@
 package com.cg.mts.entities;
-
+//these are packages.
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "seat_master")
+@Table(name = "seat_master") //table 
 public class Seat {
 	@Id
 	@GeneratedValue
