@@ -23,7 +23,7 @@ public class AdminService implements IAdminService {
 	IUserRepository userRepository;
 	
 	Logger logger = LoggerFactory.getLogger(AdminService.class);
-	
+	// this method is for adding admin
 	@Override
 	public Admin addNewAdmin(Admin admin) throws AdminExistsException {
 		logger.info("Inside addNewAdmin method");
@@ -37,7 +37,7 @@ public class AdminService implements IAdminService {
 			return adminObj;
 		}
 	}
-	
+	// this method is for deleting
 	@Override
 	public void deleteAdmin(int userId) throws AdminNotFoundException {
 		logger.info("Inside deleteAdmin method");
