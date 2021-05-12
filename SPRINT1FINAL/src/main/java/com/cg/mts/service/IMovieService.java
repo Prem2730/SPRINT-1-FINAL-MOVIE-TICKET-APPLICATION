@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.cg.mts.entities.Movie;
 import com.cg.mts.exception.MovieNotFoundException;
-
+//Unimplemented methods
 public interface IMovieService {
 	public Movie addMovie(Movie movie) throws MovieNotFoundException;
 	public String removeMovie(int movieid) throws MovieNotFoundException;
@@ -15,3 +15,4 @@ public interface IMovieService {
 
 	
 }
+//This method is implemented by Ratna Kumari
