@@ -70,7 +70,9 @@ public class Booking {
 	}
 	public void setTicket(Ticket ticket) {
 		this.ticket = ticket;
-	}public Booking() {
+	}
+	//implementation of constructors
+	public Booking() {
 		// TODO Auto-generated constructor stub
 		super();
 	}
