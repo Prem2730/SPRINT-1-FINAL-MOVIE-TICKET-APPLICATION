@@ -100,13 +100,14 @@ public class SeatController {
 		}
 	}
 	
+	//To get avaliable seats - if not throw exception
 	@GetMapping("/getAvailableSeats")
 	public ResponseEntity<Object> getAllSeats() {
 		List<Seat> seatList;
-		try {
+		try {//To check the exception.
 			seatList = service.getAll();
 			return new ResponseEntity<Object>(seatList,HttpStatus.OK);
-		} catch (SeatNotFoundException e) {
+		} catch (SeatNotFoundException e) {//if exception excute this block.
 			// TODO Auto-generated catch block
 			logger.error("Seat Not Found Exception");
 			e.printStackTrace();
@@ -114,5 +115,5 @@ public class SeatController {
 		}
 	}
 
-
+//this done by vishnu
 }
