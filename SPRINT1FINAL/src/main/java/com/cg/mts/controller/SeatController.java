@@ -1,5 +1,5 @@
 package com.cg.mts.controller;
-
+//these are packages.
 import java.util.List;
 
 import javax.validation.Valid;
@@ -28,19 +28,21 @@ import com.cg.mts.service.ISeatService;
 @RestController
 @RequestMapping("/mts/seat")
 public class SeatController {
+//autowired with seat service
 	@Autowired
 	ISeatService service;
-
+//logger - to see output.
 	Logger logger = LoggerFactory.getLogger(SeatController.class);
 
+// To booking seat & if not throw exception.
 	@PostMapping("/bookSeat")
 	public ResponseEntity<Object> bookSeat(@RequestParam int seatId)  {
-		logger.info("Inside bookSeat method");
+		logger.info("Inside bookSeat method"); //logger helps to see is message.
 		Seat seatData = null;
-		try {
+		try {  //check the exception.
 			seatData = service.bookSeat(seatId);
 			return new ResponseEntity<Object>(seatData, HttpStatus.OK);
-		} catch (SeatNotFoundException e) {
+		} catch (SeatNotFoundException e) { //if exception excute this block.
 			// TODO Auto-generated catch block
 			logger.error("Seat Not Found Exception");
 			e.printStackTrace();
@@ -48,15 +50,15 @@ public class SeatController {
 		}
 		
 	}
-
+//To cancel seat & if not throw exception.
 	@PutMapping("/cancelSeat")
 	public ResponseEntity<Object> cancelSeat(@RequestParam int seatId) {
 		logger.info("Inside cancelSeat method");
 		Seat seatData;
-		try {
+		try {//To check the exception.
 			seatData = service.cancelSeatBooking(seatId);
 			return new ResponseEntity<Object>(seatData, HttpStatus.OK);
-		} catch (SeatNotFoundException e) {
+		} catch (SeatNotFoundException e) { //if exception excute this block.
 			// TODO Auto-generated catch block
 			logger.error("Seat Not Found Exception");
 			e.printStackTrace();
