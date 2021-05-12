@@ -35,7 +35,7 @@ public class MovieController {
 	
 	
 	
-	
+	//add new movie
 	@PostMapping("/addMovie")
 	public ResponseEntity<Object> addMovie(@Valid @RequestBody Movie movie){
 		logger.debug("addMovie method is accessed from the MovieController");
@@ -53,7 +53,7 @@ public class MovieController {
 		
 	}
 	
-	
+	//delete movie
 	@DeleteMapping("/deleteMovie/{id}")
 	public ResponseEntity<String> deleteMovie(@PathVariable Integer id){
 		logger.debug("deleteMovie method is accessed from the MovieController");
@@ -69,7 +69,7 @@ public class MovieController {
 	}
 	
 	
-	
+	//update movie
 	@PostMapping("/updateMovie")
 	public ResponseEntity<Object> updateMovie(@Valid @RequestBody Movie movie){
 		logger.debug("updateMovie method is accessed from the MovieController");
@@ -85,7 +85,7 @@ public class MovieController {
 	}
 	
 		
-
+         //view movieList by movie id
 	@GetMapping("/viewMovie/{id}")
 	public ResponseEntity<Object> viewMovie(@PathVariable int id){
 		logger.debug("viewMovie method is accessed from the MovieController");
@@ -100,7 +100,7 @@ public class MovieController {
 	}	
 	
 		
-	
+	//view all movielist
 	@GetMapping("/viewMovieList")
 	public ResponseEntity<Object> viewMovieList(){
 		logger.debug("viewMovieList method is accessed from the MovieController");
