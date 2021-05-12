@@ -28,7 +28,7 @@ public class AdminController {
 	
 	Logger logger = LoggerFactory.getLogger(AdminController.class);
 	
-	
+	//for adding admin 
 	@PostMapping("/addAdmin")
 	public ResponseEntity<Object> addAdmin(@Valid @RequestBody Admin admin) {
 		logger.info("Inside addAdmin method");
@@ -40,7 +40,7 @@ public class AdminController {
 			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
 		}
 	}
-	
+	// for deleting admin
 	@DeleteMapping("/deleteAdmin")
 	public ResponseEntity<Object> deleteAdmin(@RequestParam int userId){
 		logger.info("Inside deleteAdmin method");
